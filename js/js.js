@@ -27,6 +27,7 @@ do {
 credito();
 
 
+
 /* function login() {
   Nombre = prompt("Ingresa tu nombre");
   Apellido = prompt("Ingresa tu apellido");
