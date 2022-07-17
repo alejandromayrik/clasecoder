@@ -8,22 +8,37 @@ var Nombre;
 var Apellido;
 
 
-login();
 
-function login() {
+
+
+
+//login();
+
+do {  
+  Nombre = prompt("Ingresa tu nombre");
+  
+} while (Nombre=="");
+
+
+do {  
+  Apellido = prompt("Ingresa tu apellido");
+  
+} while (Apellido=="");
+credito();
+
+
+/* function login() {
   Nombre = prompt("Ingresa tu nombre");
   Apellido = prompt("Ingresa tu apellido");
   if (Nombre === '' && Apellido === '') {
     console.log('Faltan datos');
-    //login ();
+    login ();
   } else {
     console.log('Hola ', Nombre, Apellido);
 
     credito();
   }
-}
-
-
+} */
 
 
 function credito() {
@@ -35,8 +50,10 @@ function credito() {
 
     prestamo = parseInt(prompt('¿cuanto deseas?'));
     if (prestamo > creditofinal) {
-      alert('te excediste del tope');
-
+      while ( prestamo > creditofinal) {
+        alert('te excediste del tope');
+        prestamo = parseInt(prompt('¿cuanto deseas?'));
+      }
     } else {
       preguntarCuotas();
     }
@@ -45,7 +62,6 @@ function credito() {
   }
 
 }
-
 
 
 function preguntarCuotas() {
