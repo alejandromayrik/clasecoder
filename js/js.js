@@ -7,13 +7,6 @@ var prestamo = 0;
 var Nombre;
 var Apellido;
 
-
-
-
-
-
-//login();
-
 do {  
   Nombre = prompt("Ingresa tu nombre");
   
@@ -24,22 +17,8 @@ do {
   Apellido = prompt("Ingresa tu apellido");
   
 } while (Apellido=="");
+console.log('Hola ', Nombre, Apellido);
 credito();
-
-
-
-/* function login() {
-  Nombre = prompt("Ingresa tu nombre");
-  Apellido = prompt("Ingresa tu apellido");
-  if (Nombre === '' && Apellido === '') {
-    console.log('Faltan datos');
-    login ();
-  } else {
-    console.log('Hola ', Nombre, Apellido);
-
-    credito();
-  }
-} */
 
 
 function credito() {
