@@ -59,7 +59,18 @@ function preguntarCuotas() {
 }
 
 
+const cliente = [{Nombre, Apellido, creditofinal}]
 
-console.log(Nombre + ' ' + 'la cuota  final es de: ', creditofinal);
+for (const item of cliente) {
+  alert('Hola ' + item.Nombre + ' ' + item.Apellido + ' tu credito es de $' + item.creditofinal);
+}
+
+
+
+
+
+
+
+//console.log(Nombre + ' ' + 'la cuota  final es de: ', creditofinal);
 
 
