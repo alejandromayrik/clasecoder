@@ -7,19 +7,19 @@ var prestamo = 0;
 var Nombre;
 var Apellido;
 
-do {  
+do {
   Nombre = prompt("Ingresa tu nombre");
-  
-} while (Nombre=="");
+
+} while (Nombre == "");
 
 
-do {  
+do {
   Apellido = prompt("Ingresa tu apellido");
-  
-} while (Apellido=="");
+
+} while (Apellido == "");
 console.log('Hola ', Nombre, Apellido);
 credito();
-
+preguntarCuotas();
 
 function credito() {
   const pregunta = prompt('Quieres un credito? (si / no)');
@@ -29,13 +29,10 @@ function credito() {
     alert('puedo prestarte un credito de $' + creditofinal);
 
     prestamo = parseInt(prompt('¿cuanto deseas?'));
-    if (prestamo > creditofinal) {
-      while ( prestamo > creditofinal) {
-        alert('te excediste del tope');
-        prestamo = parseInt(prompt('¿cuanto deseas?'));
-      }
-    } else {
-      preguntarCuotas();
+    if (prestamo > creditofinal) 
+    {
+      alert('No te puedo  prestar mas de $' + creditofinal);
+      
     }
   } else {
     prompt('No te preocupes');
