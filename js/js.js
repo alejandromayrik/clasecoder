@@ -1,5 +1,3 @@
-
-
 const iva = 0.21;
 const interes = 0.05;
 var creditofinal = 0;
@@ -7,19 +5,26 @@ var prestamo = 0;
 var Nombre;
 var Apellido;
 
-do {
-  Nombre = prompt("Ingresa tu nombre");
-
-} while (Nombre == "");
 
 
-do {
-  Apellido = prompt("Ingresa tu apellido");
+inicio();
+function inicio() {
+  do {
+    Nombre = prompt("Ingresa tu nombre");
+  
+  } while (Nombre == "");
+  
+  
+  do {
+    Apellido = prompt("Ingresa tu apellido");
+  
+  } while (Apellido == "");
+  console.log('Hola ', Nombre, Apellido);
+  credito();
+  preguntarCuotas();
+  
+}
 
-} while (Apellido == "");
-console.log('Hola ', Nombre, Apellido);
-credito();
-preguntarCuotas();
 
 function credito() {
   const pregunta = prompt('Quieres un credito? (si / no)');
@@ -60,11 +65,18 @@ function preguntarCuotas() {
 
 
 const cliente = [{Nombre, Apellido, creditofinal}]
+cliente.Nombre = Nombre;
+cliente.Apellido = Apellido;
+cliente.creditofinal = creditofinal;
+console.log(cliente);
 
-for (const item of cliente) {
-  alert('Hola ' + item.Nombre + ' ' + item.Apellido + ' tu credito es de $' + item.creditofinal);
+
+ for (const item of cliente) {
+  alert('Hola ' + item.Nombre + ' ' + item.Apellido + ' tu cuota es de $' + item.creditofinal);
+
 }
-
+ 
+inicio();
 
 
 
