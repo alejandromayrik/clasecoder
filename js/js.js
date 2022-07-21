@@ -20,11 +20,11 @@ function inicio() {
   
   } while (Apellido == "");
   console.log('Hola ', Nombre, Apellido);
-  credito();
-  preguntarCuotas();
+  
   
 }
 
+credito();
 
 function credito() {
   const pregunta = prompt('Quieres un credito? (si / no)');
@@ -34,9 +34,14 @@ function credito() {
     alert('puedo prestarte un credito de $' + creditofinal);
 
     prestamo = parseInt(prompt('¿cuanto deseas?'));
+   
     if (prestamo > creditofinal) 
     {
       alert('No te puedo  prestar mas de $' + creditofinal);
+
+    } else {
+      preguntarCuotas();
+    
       
     }
   } else {
@@ -64,10 +69,14 @@ function preguntarCuotas() {
 }
 
 
-const cliente = [{Nombre, Apellido, creditofinal}]
-cliente.Nombre = Nombre;
-cliente.Apellido = Apellido;
-cliente.creditofinal = creditofinal;
+const cliente = [{
+Nombre : Nombre,
+Apellido : Apellido,
+creditofinal : creditofinal
+} ]
+
+
+console.log(Nombre, Apellido, creditofinal);
 console.log(cliente);
 
 
@@ -76,7 +85,7 @@ console.log(cliente);
 
 }
  
-inicio();
+ 
 
 
 
